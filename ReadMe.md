@@ -14,82 +14,38 @@ Clone this repo on your local machine using:
 
 	numpy==1.18.1
 	py-opencv==3.4.2
-```
+
 
 ### Usage
 
+txt and jpg must hast the same name
+
+file1.txt and file1.jpg
+
 Open cmd and call "rotateTxtAndJpg"__directory
 
-	python rotateTxtandJpg.py -txt txt -out out -ang angle
-
-		txt - source directory of .txt files; default: txt ; required=True
-		out - target directory of roteted .txt files; default out
-      angle - angle for rotation the bbox (90,180,270)
-
 ```
-Give the example
+python rotateTxtandJpg.py -txt txt -out out -ang angle
+```
+
+
+#### Example
+
+
 without output dir:
 
-		python rotateTxtAndJpg -txt txt -a 90
+	python rotateTxtAndJpg -txt txt -a 90
 
-	with output dir:
+with output dir:
 			
-		python rotateTxtAndJpg -txt txt -out out -a 90
-```
+	python rotateTxtAndJpg -txt txt -out out -a 90
 
+txt - source directory of .txt files; default: txt ; required=True <br/>
+out - target directory of roteted .txt files; default out <br/>
+angle - angle for rotation the bbox (90,180,270)
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Kirko Groﬂe M.Sc.** - 
+* **Kirko Groﬂe M. Sc.** BTU Cottbus-Senftenberg 2020 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-<!--
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
--->
