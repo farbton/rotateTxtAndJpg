@@ -13,9 +13,29 @@ class Manipulate(object):
         #self.bbox_rotate_list = []
 
     def rotate_img(self, jpg_filename):
-        img = cv2.imread(jpg_filename)
-        rotate_img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
-        return rotate_img
+        def rotation_90(jpg_filename):
+            img = cv2.imread(jpg_filename)
+            rotate_img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
+            return rotate_img
+
+        def rotation_180(jpg_filename):
+            img = cv2.imread(jpg_filename)
+            rotate_img = cv2.rotate(img, cv2.ROTATE_180)
+            return rotate_img
+
+        def rotation_270(jpg_filename):
+            img = cv2.imread(jpg_filename)
+            rotate_img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
+            return rotate_img
+        
+        switch = {
+            90:  rotationmatrix_90(jpg_filename),
+            180: rotationmatrix_180(jpg_filename),
+            270: rotationmatrix_270(jpg_filename),                      
+        }
+        return switch.get(int(self.angle), "error in rotate_img()")
+
+
 
     def manipulate_files(self, list_of_filenames):
         print("manipulate files...")
