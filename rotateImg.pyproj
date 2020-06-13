@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b55557de-3e36-4b72-a08e-911319b0f47b</ProjectGuid>
+    <ProjectGuid>{b55557de-3e36-4b72-a08e-911319b0f47b}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>rotateImg.py</StartupFile>
     <SearchPath>
@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>rotateImg</Name>
     <RootNamespace>rotateImg</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|rotateImg</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="manipulate.py" />
+    <Compile Include="writer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="reader.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="rotateImg.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|rotateImg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
