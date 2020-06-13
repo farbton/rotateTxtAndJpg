@@ -9,7 +9,7 @@ the Bounding Box in .txt-format for training in darknet
 Requirements
 ------------
 	numpy==1.18.1
-
+	open-cv==	
 
 Usage
 -----
