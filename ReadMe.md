@@ -32,7 +32,7 @@ python rotateTxtandJpg.py -txt txt -out out -ang angle
 #### Example
 
 
-without output dir:
+without output dir (default=out):
 
 	python rotateTxtAndJpg -txt txt -a 90
 
