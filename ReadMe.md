@@ -47,5 +47,5 @@ angle - angle for rotation the bbox (90,180,270)
 
 ## Authors
 
-* **Kirko Groﬂe M. Sc.** BTU Cottbus-Senftenberg 2020 
+* **Kirko Groﬂe M. Sc.** BTU Cottbus-Senftenberg  June 2020 
 
