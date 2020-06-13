@@ -40,8 +40,8 @@ with output dir:
 			
 	python rotateTxtAndJpg -txt txt -out out -a 90
 
-txt - source directory of .txt files; default: txt ; required=True <br/>
-out - target directory of roteted .txt files; default out <br/>
+txt - source directory of .txt and .jpg files; default: txt ; required=True <br/>
+out - target directory of roteted .txt and .jpg files; default out <br/>
 angle - angle for rotation the bbox (90,180,270)
 
 
