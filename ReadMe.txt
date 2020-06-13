@@ -1,18 +1,20 @@
-RotateImg
+RotateTxtAndJpg
 =========
 
 Tool for Rotation for images in.jpg-format and 
 the Bounding Box in .txt-format for training in darknet
 
-.jpg and .txt must exact the same filename
+.jpg and .txt must have exact the same filename
 
 Requirements
 ------------
 	numpy==1.18.1
-	open-cv==	
+	py-opencv==3.4.2	
 
 Usage
 -----
+
+git clone
 
 Open cmd and call "rotateImg"__directory
 
