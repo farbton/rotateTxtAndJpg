@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{b55557de-3e36-4b72-a08e-911319b0f47b}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>rotateImg.py</StartupFile>
+    <StartupFile>rotateTxtAndJpg.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,7 +29,7 @@
     <Compile Include="reader.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="rotateImg.py" />
+    <Compile Include="rotateTxtAndJpg.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="CondaEnv|CondaEnv|rotateImg" />
