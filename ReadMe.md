@@ -1,36 +1,42 @@
-# Project Title
+# RotateTxtAndJpg
 
-One Paragraph of project description goes here
+Tool for Rotation for images in.jpg-format and 
+the Bounding Box in .txt-format for training in darknet
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone this repo on your local machine using: 
+	
+	git clone https://github.com/farbton/rotateTxtAndJpg
 
-### Prerequisites
 
-What things you need to install the software and how to install them
+### Requirements
 
+	numpy==1.18.1
+	py-opencv==3.4.2
 ```
-Give examples
-```
 
-### Installing
+### Usage
 
-A step by step series of examples that tell you how to get a development env running
+Open cmd and call "rotateTxtAndJpg"__directory
 
-Say what the step will be
+	python rotateTxtandJpg.py -txt txt -out out -ang angle
+
+		txt - source directory of .txt files; default: txt ; required=True
+		out - target directory of roteted .txt files; default out
+      angle - angle for rotation the bbox (90,180,270)
 
 ```
 Give the example
+without output dir:
+
+		python rotateTxtAndJpg -txt txt -a 90
+
+	with output dir:
+			
+		python rotateTxtAndJpg -txt txt -out out -a 90
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -72,10 +78,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Kirko Groﬂe M.Sc.** - 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
+<!--
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
@@ -85,3 +92,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+-->
