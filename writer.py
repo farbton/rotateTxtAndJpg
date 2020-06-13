@@ -24,11 +24,9 @@ class Writer(object):
     def write_rotate_bbox_list(self, txt_filename, bbox_list_rotated):
         head, tail = os.path.split(txt_filename)
         file_name, file_ext = os.path.splitext(tail)
-        #print(file_name, file_ext)
         angle_ext = self.give_angle_ext()
         new_file_name = file_name + angle_ext + file_ext
         new_file_path = self.out_dir + "\\" + new_file_name
-        #print(new_file_path)
         new_file = open(new_file_path, "w")
         new_file.writelines(str(bbox) for bbox in bbox_list_rotated)
         new_file.close()
@@ -39,9 +37,6 @@ class Writer(object):
         angle_ext = self.give_angle_ext()
         new_file_name = file_name + angle_ext + file_ext
         new_file_path = self.out_dir + "\\" + new_file_name
-        #print(new_file_path)          
-       #print(self.img_rotated)
         name = os.path.splitext(jpg_filename)[0]
-        #print(name)
         cv2.imwrite(new_file_path, img_rotated)
         

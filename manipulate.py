@@ -9,8 +9,7 @@ class Manipulate(object):
     def __init__(self, source_dir, out_dir, angle):
         self.source_dir = source_dir
         self.out_dir = out_dir
-        self.angle   = angle
-        #self.bbox_rotate_list = []
+        self.angle = angle
 
     def rotate_img(self, jpg_filename):
         def rotation_90(jpg_filename):
@@ -36,31 +35,27 @@ class Manipulate(object):
         return switch.get(int(self.angle), "error in rotate_img()")
 
 
-
     def manipulate_files(self, list_of_filenames):
         print("manipulate files...")
         for i, (txt_filename, jpg_filename) in enumerate(list_of_filenames):
-            #print(i,txt_filename,jpg_filename)
             bbox_list = self.reader.get_bbox_list(txt_filename)
             bbox_list_rotated = self.rotate_bbox_list(bbox_list)
             img_rotated = self.rotate_img(jpg_filename)
             self.writer.write_rotate_bbox_list(txt_filename, bbox_list_rotated)
             self.writer.write_img_rotated(jpg_filename, img_rotated)
-        print("Edited files:",2*(i+1), "| txt_files:",i+1, "| jpg_files:",i+1)
+        print("Edited files:",2 * (i + 1), "| txt_files:",i + 1, "| jpg_files:",i + 1)
 
     def start(self):
-        self.writer = Writer(out_dir=self.out_dir, angle=self.angle )
+        self.writer = Writer(out_dir=self.out_dir, angle=self.angle)
         self.reader = Reader(source_dir=self.source_dir)
-        list_of_filenames =self.reader.get_list_of_filenames()
-        #print(list_of_filenames)
+        list_of_filenames = self.reader.get_list_of_filenames()
         self.manipulate_files(list_of_filenames)
         
             
     def rotate_bbox_list(self,bbox_list):
         bbox_rotate_list = []
         for bbox in bbox_list:
-            #print(bbox)
-            bbox_rotate =  self.calculate_points(bbox)
+            bbox_rotate = self.calculate_points(bbox)
             bbox_rotate_list.append(bbox_rotate)
             bbox_rotate_list.append('\n')
         return bbox_rotate_list
@@ -74,18 +69,16 @@ class Manipulate(object):
         x_pixel, y_pixel, width_new, height_new = self.set_corr_img_pixel(coordinate, width, height)
         bbox_rotate = "{}, {:f}, {:f}, {:f}, {:f}".format(int(classname), float(x_pixel), float(y_pixel), float(width_new), float(height_new))       
         bbox_rotate = bbox_rotate.replace(',', '')
-        #print(bbox_rotate)
         return bbox_rotate
    
     def set_corr_img_pixel(self, coordinates, width, height):
         x, y = coordinates
-        #print(x,y)
         def set_pix_90():
-            return x+1, y, height, width
+            return x + 1, y, height, width
         def set_pix_180():
-            return x+1, y+1, width, height
+            return x + 1, y + 1, width, height
         def set_pix_270():
-            return x, y+1, height, width
+            return x, y + 1, height, width
 
         switch = {
             90:  set_pix_90(),

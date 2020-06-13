@@ -5,9 +5,9 @@ import sys
 from manipulate import Manipulate
 
 def main():
-    parser = argparse.ArgumentParser(description='rotate Image')
+    parser = argparse.ArgumentParser(description='rotate bbox and img')
     parser.add_argument('-s', help='source directory of orginal images and txt files', required=True, default='source')
-    parser.add_argument('-o', help='target directory of rotated images', default='out')
+    parser.add_argument('-o', help='target directory of rotated images and txt files', default='out')
     parser.add_argument('-a', help='angle for rotation', required=True)
     args = parser.parse_args()
 
@@ -30,4 +30,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
