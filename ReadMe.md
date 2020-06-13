@@ -1,7 +1,7 @@
 # RotateTxtAndJpg
 
-Tool for Rotation for images in.jpg-format and 
-the Bounding Box in .txt-format for training in darknet
+Tool for rotation of images in .jpg-format and 
+the bounding box in .txt-format for training in darknet
 
 ## Getting Started
 
