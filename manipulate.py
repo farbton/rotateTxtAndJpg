@@ -29,9 +29,9 @@ class Manipulate(object):
             return rotate_img
         
         switch = {
-            90:  rotationmatrix_90(jpg_filename),
-            180: rotationmatrix_180(jpg_filename),
-            270: rotationmatrix_270(jpg_filename),                      
+            90:  rotation_90(jpg_filename),
+            180: rotation_180(jpg_filename),
+            270: rotation_270(jpg_filename),                      
         }
         return switch.get(int(self.angle), "error in rotate_img()")
 
