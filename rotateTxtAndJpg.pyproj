@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{b55557de-3e36-4b72-a08e-911319b0f47b}</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>rotateTxtAndJpg.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>rotateImg</Name>
+    <Name>rotateTxtAndJpg</Name>
     <RootNamespace>rotateImg</RootNamespace>
     <InterpreterId>CondaEnv|CondaEnv|rotateImg</InterpreterId>
   </PropertyGroup>
