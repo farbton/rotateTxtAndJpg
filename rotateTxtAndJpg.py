@@ -6,9 +6,10 @@ from manipulate import Manipulate
 
 def main():
     parser = argparse.ArgumentParser(description='rotate bbox and img')
-    parser.add_argument('-s', help='source directory of orginal images and txt files', required=True, default='source')
+    parser.add_argument('-s', help='source directory of orginal images and txt files', default='source')
     parser.add_argument('-o', help='target directory of rotated images and txt files', default='out')
     parser.add_argument('-a', help='angle for rotation', required=True)
+    parser.add_argument('-j', help='true for rotate only .txt, without .jpg')
     args = parser.parse_args()
 
     source_dir = os.path.join(os.path.dirname(os.path.realpath('__file__')), args.s)
