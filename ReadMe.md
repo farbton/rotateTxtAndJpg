@@ -25,24 +25,24 @@ file1.txt and file1.jpg
 Open cmd and call "rotateTxtAndJpg"__directory
 
 ```
-python rotateTxtandJpg.py -txt txt -out out -ang angle
+python rotateTxtandJpg.py -s source -o out -a angle
 ```
 
 
 #### Example
 
 
-without output dir (default=out):
+with default directory (-s=source, -o=out):
 
-	python rotateTxtAndJpg -txt txt -a 90
+	python rotateTxtAndJpg -a 90
 
-with output dir:
+without default directory:
 			
-	python rotateTxtAndJpg -txt txt -out out -a 90
+	python rotateTxtAndJpg -s source -o out -a 90
 
-txt - source directory of .txt and .jpg files; default: txt ; required=True <br/>
-out - target directory of roteted .txt and .jpg files; default out <br/>
-angle - angle for rotation the bbox (90,180,270)
+source - source directory of .txt and .jpg files; default: source  <br/>
+out    - target directory of roteted .txt and .jpg files; default: out <br/>
+angle  - angle to turn the bbox (90,180,270)
 
 
 ## Authors
