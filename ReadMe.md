@@ -1,7 +1,7 @@
 # RotateTxtAndJpg
 
 Tool for rotation of images in .jpg-format and 
-the bounding box in .txt-format for training in darknet
+the bounding box in .txt-format for training 
 
 ## Getting Started
 
@@ -47,5 +47,5 @@ angle  - angle to turn the bbox (90,180,270)
 
 ## Authors
 
-* **Kirko Groﬂe M. Sc.** BTU Cottbus-Senftenberg  June 2020 
+* **Kirko Gro√üe M. Sc.** BTU Cottbus-Senftenberg  June 2020 
 
